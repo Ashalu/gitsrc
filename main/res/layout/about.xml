@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="activity.About">
+
+    <include android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <View
+        android:id="@+id/divider_top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:background="@color/tadka_green" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtabt"
+        android:layout_width="wrap_content"
+        android:padding="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:textSize="14dp"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    </ScrollView>
+
+
+</LinearLayout>

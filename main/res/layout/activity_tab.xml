@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@+id/mainDrawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/fakeStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar_with_spinner" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:tabBackground="@drawable/tab_background"
+            app:tabMode="fixed"
+            android:background="#fff"
+
+            app:tabTextAppearance="@style/MyCustomTabTextAppearance"
+
+            />
+        <!--app:tabTextAppearance="@style/MyCustomTabTextAppearance"-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/drawerFragmentSecond"
+        android:name="com.tadqa.android.fragment.DrawerFragment"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        tools:layout="@layout/fragment_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

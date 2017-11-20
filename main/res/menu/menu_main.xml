@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.ChooseLocality">
+
+    <!--<item-->
+        <!--android:id="@+id/About"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/about"-->
+        <!--app:showAsAction="never" />-->
+    <!--<item-->
+        <!--android:id="@+id/FAQ_URL"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/help"-->
+        <!--app:showAsAction="never" />-->
+    <!--<item-->
+        <!--android:id="@+id/Rate"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/rate"-->
+        <!--app:showAsAction="never" />-->
+    <!--<item-->
+        <!--android:id="@+id/Contact"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/call"-->
+        <!--app:showAsAction="never" />-->
+
+</menu>

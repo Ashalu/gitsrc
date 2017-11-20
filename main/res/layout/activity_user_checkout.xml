@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.UserCheckoutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
+
+        <View
+            android:id="@+id/divider_top"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/app_bar"
+            android:background="@color/tadka_green" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/divider_top"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/userLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="30dp"
+                        android:gravity="right"
+                        android:paddingTop="5dp"
+                        android:text="@string/SignIn"
+                        android:textColor="#E5562A"
+                        android:textColorLink="#E5562A"
+                        android:textSize="13dp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_NameContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <EditText
+                            android:id="@+id/editText_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="3"
+                            android:hint="User Name"
+                            android:lines="1"
+                            android:textSize="15dp" />
+
+                        <EditText
+                            android:id="@+id/editText_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="18dp"
+                            android:layout_weight="3"
+                            android:hint="Phone Number"
+                            android:inputType="number|phone"
+                            android:lines="1"
+                            android:maxLength="10"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/layout_HNoStreet"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_marginLeft="20dp"                            -->
+                    <!--android:visibility="visible">-->
+
+                    <EditText
+                        android:id="@+id/editText_houseNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+                        android:hint="Flat/House No."
+                        android:lines="1"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/editText_street"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+                        android:hint="Street/Society "
+                        android:lines="1"
+                        android:textSize="14dp" />
+
+                    <!--</LinearLayout>-->
+
+                    <EditText
+                        android:id="@+id/editText_landmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+                        android:hint="Landmark (Optional)"
+                        android:lines="1"
+                        android:textSize="14dp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_AreaCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginRight="18dp"
+                        android:layout_weight="1"
+                        android:visibility="visible">
+
+                        <Spinner
+                            android:id="@+id/editText_area"
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="5" />
+
+                        <EditText
+                            android:id="@+id/editText_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="3"
+                            android:hint="City"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvHaveCoupon"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Have a coupon code?"
+                            android:textColor="#E5562A" />
+
+                        <TextView
+                            android:id="@+id/changeAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="Change Address"
+                            android:textColor="#E5562A" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:focusable="true"
+                        android:gravity="center_horizontal"
+                        android:text="Payment Mode"
+                        android:textColor="@color/Black"
+                        android:textSize="17dp" />
+
+
+                    <RadioGroup
+                        android:id="@+id/paymentmode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/cod"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:checked="true"
+                            android:padding="7dp"
+                            android:text="COD"
+                            android:textColor="@color/md_blue_600"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <RadioButton
+                            android:id="@+id/paytm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:drawableLeft="@drawable/paytm"
+                            android:padding="7dp" />
+                    </RadioGroup>
+                    <!--android:drawableLeft="@drawable/cod"-->
+
+                    <LinearLayout
+                        android:id="@+id/codOtplayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnverify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="7dp"
+                            android:background="@drawable/button_grey_roundcorner"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:text="Verify Me !"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp">
+
+                            <TextView
+                                android:id="@+id/resendotp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="10dp"
+                                android:text="*We will send you SMS with the confirmation code"
+                                android:textSize="13dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="22dp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/resendotp1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="to given number. "
+                                    android:textSize="13dp" />
+
+
+                                <TextView
+                                    android:id="@+id/ResendOtp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/resendotp1"
+                                    android:text="Resend OTP"
+                                    android:textColor="#E5562A"
+                                    android:textColorLink="#E5562A"
+
+                                    />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                        <EditText
+
+                            android:id="@+id/txt_otp"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:hint="Enter OTP "
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/button_grey_roundcorner"
+                android:enabled="false"
+                android:text="Order"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/snackbarCoordinatorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+
+            </android.support.design.widget.CoordinatorLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+

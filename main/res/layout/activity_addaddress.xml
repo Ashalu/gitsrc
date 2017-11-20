@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:theme="http://schemas.android.com/tools"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/loc" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Delivery Address"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_HNoStreetno"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:paddingLeft="15dp"-->
+                <!--android:paddingRight="15dp"-->
+                <!--android:text="City"-->
+                <!--android:textColor="@color/Black"-->
+                <!--/>-->
+
+                <!--<Spinner-->
+
+                <!--android:id="@+id/spin_city"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="15dp"-->
+                <!--android:paddingRight="15dp"-->
+                <!--android:popupTheme="@android:style/ThemeOverlay.Material.Light"-->
+                <!--/>-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Area/Location"
+                    android:textColor="@color/Black" />
+
+                <Spinner
+                    android:id="@+id/editText_area"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+                <EditText
+                    android:id="@+id/editText_houseNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="Flat/House No."
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/editText_street"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="Street/Society "
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textSize="15dp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/editText_landmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="Landmark(Optional) "
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textSize="15dp"
+
+                    />
+
+                <EditText
+                    android:id="@+id/editText_postal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="Postcode(Optional)"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textSize="15dp"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/layout_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    >
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="City : "
+                        android:textColor="@color/Black"/>
+                    <EditText
+                        android:id="@+id/edtxt_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="City"
+                        android:textSize="15dp"
+                        android:paddingRight="15dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="15dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="State : "
+                        android:textColor="@color/Black"/>
+                    <EditText
+                        android:id="@+id/edtxt_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="State"
+                        android:textSize="15dp"
+                        android:paddingRight="15dp"
+                        />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="SAVE ADDRESS"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/snackbarCoordinatorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+
+            </android.support.design.widget.CoordinatorLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Executive Meal"
+            android:textSize="16dp"
+            android:typeface="serif"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Price"
+                android:textColor="@color/Yellow"
+                android:textSize="16dp"
+                android:typeface="serif"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Quatity"
+                android:textColor="@color/Yellow"
+                android:textSize="16dp"
+                android:typeface="serif"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Total Price"
+                android:textColor="@color/Yellow"
+                android:textSize="16dp"
+                android:typeface="serif"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="$100"
+                android:textColor="#99000000"
+                android:textSize="18dp"
+                android:typeface="serif"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/quantity_change_buttons_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <Button
+                        android:id="@+id/decrement"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button_decrement"
+                        android:text="-"
+                        android:textColor="@color/tadka_orange"
+                        android:textSize="20dp"
+                        android:typeface="serif"/>
+
+                    <TextView
+                        android:id="@+id/item_quantity"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:background="@color/tadka_orange"
+                        android:text="0"
+                        android:typeface="serif"/>
+
+                    <Button
+                        android:id="@+id/increment"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button_increment"
+                        android:text="+"
+                        android:textColor="@color/tadka_orange"
+                        android:textSize="20dp"
+                        android:typeface="serif"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/totalPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="$500"
+                android:textColor="#99000000"
+                android:textSize="18dp"
+                android:typeface="serif"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

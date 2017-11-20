@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <include android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:tabBackground="@drawable/tab_background"
+        app:tabSelectedTextColor="@color/tadka_green"
+        app:tabMode="scrollable"
+        app:tabPaddingStart="0dp"
+        app:tabPaddingEnd="0dp"
+        app:tabTextAppearance="@style/MyCustomTabTextAppearance" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/checkoutFooter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true"
+        android:background="@null"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#90000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:background="@color/footer_background"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/totalAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Total : "
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#60ffffff" />
+
+            <TextView
+                android:id="@+id/checkoutActivity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="CHECKOUT"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activity.StartupActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/d3" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/default_shadow_inverse" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_horizontal"
+            android:src="@drawable/tadka_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Hyper Local Food Delivery !"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:typeface="serif"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login_footer"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <!--<ImageButton-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/google"-->
+            <!--android:textColor="@android:color/white" />-->
+
+        <!--<ImageButton-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/facebook"-->
+            <!--android:textColor="@android:color/white" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/skipFooter"
+        android:background="@drawable/default_shadow_inverse_new">
+
+        <Button
+            android:id="@+id/button_sign_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="SIGN UP"
+            android:typeface="serif"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="LOGIN"
+            android:typeface="serif"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <View android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.20dp"
+        android:layout_above="@+id/skipFooter"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:id="@+id/skipFooter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/default_shadow_inverse_new">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Skip for now"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:typeface="serif"
+            android:textSize="16dp"
+            android:id="@+id/skipnw" />
+    </LinearLayout>
+</RelativeLayout>

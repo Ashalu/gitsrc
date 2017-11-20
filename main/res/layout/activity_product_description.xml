@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:theme="@style/AppTheme">
+
+    <com.tadqa.android.accessibility.ScrollViewX xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/mainRlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <!--android:paddingBottom="100dp"-->
+            <RelativeLayout
+                android:id="@+id/productDescriptionHeader"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <com.flaviofaria.kenburnsview.KenBurnsView
+                    android:id="@+id/imageView_product_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:focusableInTouchMode="true"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/image_tint" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:src="@drawable/chef"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="25dp"
+                    android:id="@+id/product_chef"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:id="@+id/textView_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textView_product_price"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="ItemName"
+
+                    android:textSize="23dp" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/textView_product_category"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_above="@+id/textView_product_price"                 -->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text=""-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="16dp" />-->
+
+                <TextView
+                    android:id="@+id/textView_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="45"
+                    android:textSize="21dp" />
+
+                <LinearLayout
+                    android:id="@+id/controlQuantity"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/decrementItm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button_add"
+                        android:text="-"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/item_quantity"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="18dp"
+                        />
+
+                    <Button
+                        android:id="@+id/incrementItm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/button_add"
+                        android:text="+"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/loadingProgressWheel"
+                style="@style/Base.Widget.AppCompat.ProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productDescriptionHeader"
+                android:layout_marginTop="100dp" />
+
+            <RelativeLayout
+                android:id="@+id/productDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/productDescriptionHeader"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:paddingBottom="100dp">
+
+                <!--<TextView-->
+                <!--android:id="@+id/productDescriptionText"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="20dp"-->
+                <!--android:text="Description -"-->
+                <!--android:textAllCaps="true"-->
+                <!--android:textSize="15dp" />-->
+
+                <TextView
+                    android:id="@+id/textView_product_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text=""
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/ingre_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_product_description"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="INGREDIENTS"
+                        android:textColor="@color/tadka_green"
+                        android:textSize="15dp" />
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/tadka_green" />
+
+                </LinearLayout>
+
+                <com.tadqa.android.accessibility.ExpandedGridView
+                    android:id="@+id/gridViewIngredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ingre_linear_layout"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp"
+                    android:numColumns="4"
+                    android:scrollbars="none" />
+
+                <LinearLayout
+                    android:id="@+id/nutri_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gridViewIngredients"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="NUTRITION"
+                        android:textColor="@color/tadka_green"
+                        android:textSize="15dp" />
+
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/tadka_green" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nutritionPieViewContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/nutri_linear_layout">
+
+                    <com.tadqa.android.accessibility.PieView
+                        android:id="@+id/pieView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:layout_alignParentLeft="true" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@color/md_red_400"/>
+
+                            <TextView android:id="@+id/first"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="Fat"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@color/md_green_400"/>
+
+                            <TextView android:id="@+id/second"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="Protein"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:background="@color/md_yellow_400"/>
+
+                            <TextView android:id="@+id/third"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="Carbohydrate"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:id="@+id/callayout"
+                    android:layout_below="@id/nutritionPieViewContainer"
+                    android:layout_height="wrap_content">
+
+                    <TextView android:id="@+id/fourth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17dp"
+                        android:textColor="@color/md_blue_300"
+                        android:text="Calories"/>
+
+
+                </LinearLayout>
+
+
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/nutritionTable"-->
+                <!--android:layout_width="300dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/nutritionPieViewContainer"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginTop="25dp"-->
+                <!--android:visibility="invisible"-->
+                <!--android:background="@drawable/nutrition_background"-->
+                <!--android:orientation="vertical" />-->
+
+
+            </RelativeLayout>
+
+
+            <TextView android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E0E0E0"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:text="*Percent Daily Values are based on a 2000 calorie diet. Your daily values may be higher or lower depending on your calorie needs."
+                android:textSize="12dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/textchef"
+                android:layout_marginLeft="10dp"
+                android:layout_above="@id/footer"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+
+                android:orientation="horizontal"
+                android:layout_height="match_parent"
+
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_marginBottom="35dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/chef"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="18dp"
+                    android:textColor="#cc0000"
+                    android:text="-Chef's Special"/>
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </com.tadqa.android.accessibility.ScrollViewX>
+
+
+
+
+
+
+    <LinearLayout android:id="@+id/fakeStatusBar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fakeStatusBar"/>
+
+    <LinearLayout
+        android:id="@+id/checkoutFooter"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#90000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/footer_background"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/totalAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Total : "
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#60ffffff" />
+
+            <TextView
+                android:id="@+id/checkoutActivity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="CHECKOUT"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:theme="@style/AppTheme">-->
+
+    <!--<test.firstapp.Accessibility.ScrollViewX xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:id="@+id/mainLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@android:color/white">-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/mainRlayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--&gt;-->
+            <!--&lt;!&ndash;android:paddingBottom="100dp"&ndash;&gt;-->
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/productDescriptionHeader"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="300dp">-->
+
+                <!--<com.flaviofaria.kenburnsview.KenBurnsView-->
+                    <!--android:id="@+id/imageView_product_image"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="300dp"-->
+                    <!--android:focusableInTouchMode="true"-->
+                    <!--android:scaleType="centerCrop" />-->
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@drawable/image_tint" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:src="@drawable/chef"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:layout_marginTop="25dp"-->
+                    <!--android:id="@+id/product_chef"-->
+                    <!--android:layout_height="20dp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView_product_name"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_above="@+id/textView_product_price"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginBottom="10dp"-->
+                    <!--android:text="guhjiuhujoik"-->
+
+                    <!--android:textSize="23dp" />-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/textView_product_category"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_above="@+id/textView_product_price"                 &ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginLeft="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text=""&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@android:color/white"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="16dp" />&ndash;&gt;-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView_product_price"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:text="45"-->
+                    <!--android:textSize="21dp" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/controlQuantity"-->
+                    <!--android:layout_width="110dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_margin="20dp"-->
+                    <!--android:layout_weight="4"-->
+                    <!--android:gravity="center">-->
+
+                    <!--<Button-->
+                        <!--android:id="@+id/decrementItm"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:background="@drawable/button_add"-->
+                        <!--android:text="-"-->
+                        <!--android:textColor="#FFFFFF"-->
+                        <!--android:textSize="22dp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/item_quantity"-->
+                        <!--android:layout_width="50dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="0"-->
+                        <!--android:textSize="18dp"-->
+                        <!--/>-->
+
+                    <!--<Button-->
+                        <!--android:id="@+id/incrementItm"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:background="@drawable/button_add"-->
+                        <!--android:text="+"-->
+                        <!--android:textColor="#FFFFFF"-->
+                        <!--android:textSize="22dp" />-->
+                <!--</LinearLayout>-->
+            <!--</RelativeLayout>-->
+
+            <!--<ProgressBar-->
+                <!--android:id="@+id/loadingProgressWheel"-->
+                <!--style="@style/Base.Widget.AppCompat.ProgressBar"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/productDescriptionHeader"-->
+                <!--android:layout_marginTop="100dp" />-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/productDescription"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@id/productDescriptionHeader"-->
+                <!--android:gravity="center"-->
+                <!--android:background="@android:color/white"-->
+                <!--android:paddingBottom="100dp">-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/productDescriptionText"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_margin="20dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Description -"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textAllCaps="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="15dp" />&ndash;&gt;-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView_product_description"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="30dp"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:text=""-->
+                    <!--android:textSize="15dp" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/ingre_linear_layout"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/textView_product_description"-->
+                    <!--android:layout_marginTop="30dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="120dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="INGREDIENTS"-->
+                        <!--android:textColor="@color/tadka_green"-->
+                        <!--android:textSize="15dp" />-->
+
+                    <!--<View-->
+                        <!--android:layout_width="80dp"-->
+                        <!--android:layout_height="1dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:background="@color/tadka_green" />-->
+
+                <!--</LinearLayout>-->
+
+                <!--<test.firstapp.Accessibility.ExpandedGridView-->
+                    <!--android:id="@+id/gridViewIngredients"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/ingre_linear_layout"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_marginTop="25dp"-->
+                    <!--android:numColumns="4"-->
+                    <!--android:scrollbars="none" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/nutri_linear_layout"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/gridViewIngredients"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="120dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="NUTRITION"-->
+                        <!--android:textColor="@color/tadka_green"-->
+                        <!--android:textSize="15dp" />-->
+
+                    <!--<View-->
+                        <!--android:layout_width="60dp"-->
+                        <!--android:layout_height="1dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:background="@color/tadka_green" />-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/nutritionPieViewContainer"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="160dp"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:layout_below="@id/nutri_linear_layout">-->
+
+                    <!--<test.firstapp.Accessibility.PieView-->
+                        <!--android:id="@+id/pieView"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="8"-->
+                        <!--android:layout_alignParentLeft="true" />-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="9"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:layout_alignParentRight="true">-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:layout_marginRight="10dp"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:layout_height="wrap_content">-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="10dp"-->
+                                <!--android:layout_height="10dp"-->
+                                <!--android:background="@color/md_red_400"/>-->
+
+                            <!--<TextView android:id="@+id/first"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginLeft="15dp"-->
+                                <!--android:text="Fat"/>-->
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_marginTop="20dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:layout_marginRight="10dp"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:layout_height="wrap_content">-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="10dp"-->
+                                <!--android:layout_height="10dp"-->
+                                <!--android:background="@color/md_green_400"/>-->
+
+                            <!--<TextView android:id="@+id/second"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginLeft="15dp"-->
+                                <!--android:text="Protein"/>-->
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_marginTop="20dp"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:layout_marginRight="10dp"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:layout_height="wrap_content">-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="10dp"-->
+                                <!--android:layout_height="10dp"-->
+                                <!--android:background="@color/md_yellow_400"/>-->
+
+                            <!--<TextView android:id="@+id/third"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_marginLeft="15dp"-->
+                                <!--android:text="Carbohydrate"/>-->
+                        <!--</LinearLayout>-->
+
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="200dp"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:layout_marginLeft="8dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:id="@+id/callayout"-->
+                    <!--android:layout_below="@id/nutritionPieViewContainer"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--<TextView android:id="@+id/fourth"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="17dp"-->
+                        <!--android:text="Calories"/>-->
+
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:id="@+id/textchef"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_below="@id/callayout"-->
+                    <!--&gt;-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="20dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:src="@drawable/chef"-->
+                        <!--/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textSize="15dp"-->
+                        <!--android:textColor="#cc0000"-->
+                        <!--android:text="-Chef's Special"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/nutritionTable"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="300dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_below="@id/nutritionPieViewContainer"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_centerHorizontal="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginTop="25dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:visibility="invisible"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/nutrition_background"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="vertical" />&ndash;&gt;-->
+
+
+            <!--</RelativeLayout>-->
+
+
+                <!--<TextView android:id="@+id/footer"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="#E0E0E0"-->
+                    <!--android:gravity="center_horizontal"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:text="*Percent Daily Values are based on a 2000 calorie diet. Your daily values may be higher or lower depending on your calorie needs."-->
+                    <!--android:textSize="12dp" />-->
+
+
+
+        <!--</RelativeLayout>-->
+
+
+
+    <!--</test.firstapp.Accessibility.ScrollViewX>-->
+
+
+
+
+
+
+    <!--<LinearLayout android:id="@+id/fakeStatusBar"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<include-->
+        <!--android:id="@+id/app_bar"-->
+        <!--layout="@layout/app_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/fakeStatusBar"/>-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/checkoutFooter"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="36dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@null"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="visible">-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="#90000000" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:background="@color/footer_background"-->
+            <!--android:weightSum="2">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/totalAmount"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Total : "-->
+                <!--android:textColor="#000000"-->
+                <!--android:textSize="17dp" />-->
+
+            <!--<View-->
+                <!--android:layout_width="1dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:background="#60ffffff" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/checkoutActivity"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:text="CHECKOUT"-->
+                <!--android:textColor="#000000"-->
+                <!--android:textSize="17dp" />-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+
+
+<!--</RelativeLayout>-->

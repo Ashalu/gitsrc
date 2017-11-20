@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/containerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_full_price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Full"
+                android:textSize="17dp" />
+
+            <RelativeLayout android:id="@+id/line_full"
+                android:layout_width="70dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView_full_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="400" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_half_price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Half"
+                android:textSize="17dp" />
+
+            <RelativeLayout android:id="@+id/line_half"
+                android:layout_width="70dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView_half_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="400" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_quarter_price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Quarter"
+                android:textSize="17dp" />
+
+            <RelativeLayout android:id="@+id/line_quarter"
+                android:layout_width="70dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textView_quarter_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="400" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/controlQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/containerLayout"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/quantity_change_buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/decrement"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_decrement"
+                android:text="-"
+                android:textColor="@color/tadka_orange"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/item_quantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/tadka_orange"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/increment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_increment"
+                android:text="+"
+                android:textColor="@color/tadka_orange"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/controlQuantity"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:paddingBottom="10dp"
+        android:paddingRight="25dp">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:text="Cancel"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/tadka_green"
+            android:text="Add"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</RelativeLayout>

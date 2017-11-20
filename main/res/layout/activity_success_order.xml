@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="55dp"
+        android:src="@drawable/success" />
+
+    <TextView
+        android:id="@+id/orderConfirmationMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Order Pending !"
+        android:typeface="serif"
+        android:textSize="21sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderConfirmationMessage"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:textSize="15dp"
+        android:typeface="serif"
+        android:text="Your Order Details has been sent on your registered number"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/codmode"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:typeface="serif"
+            android:text="Cash On Delivery" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AmountPayable"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:textSize="18sp"
+            android:typeface="serif"
+            android:text="Amount Payable :" />
+
+        <Button
+            android:id="@+id/btnviewOrder"
+            android:layout_marginTop="40dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@color/tadka_orange"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:typeface="serif"
+            android:text="View Order"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:textColor="#000"
+            android:id="@+id/info"
+            android:text="*Please contact 8287104104 for any query."
+            android:layout_marginTop="50dp" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ProgressBar android:id="@+id/progressWheel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/mailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/remainingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/checkoutFooter"
+            android:animateLayoutChanges="true"
+           >
+
+            <GridView
+                android:id="@+id/foodItemsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="1"
+                android:scrollbars="none"
+                android:background="@color/main_color_grey_300"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+
+            />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">tadqa</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="default_spinner_item">East Delhi</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="Rupee">₹ </string>
+    <string name="SignIn">SignIn</string>
+    <string name="forget_password"><u>Forgot Password ?</u></string>
+    <string name="need_account"><u>Need an Account ?</u></string>
+    ///
+
+
+    <string name="customer_id">CUST23657</string>
+    <string name="test_channel_id">WAP</string>
+    <string name="test_industrytype_id">Retail</string>
+    <string name="test_website">Tadqaswap</string>
+    <string name="test_theme">merchant</string>
+    <string name="email_id">varsha@algowire.com</string>
+
+    <string name="test_staging_merchantID">Tadqas32817526784432</string>
+    <string name="ProductionMID">Tadqas53278295795110</string>
+    <string name="ProductionWebsiteWAP">Tadqawap</string>
+    <string name="ProductionIndustry_ID">Retail120</string>
+    <string name="ProductionChannel_ID">WAP</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Error messages -->
+    <string name="network_offline">No Internet Connection</string>
+
+</resources>

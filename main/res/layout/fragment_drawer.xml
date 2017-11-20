@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical"
+    tools:context=".fragment.DrawerFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/drawerHeader"
+                android:layout_width="match_parent"
+                android:layout_height="175dp">
+
+                <!-- This is the drawer header -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bg" />
+
+                <!-- This is black translucent shade on drawer header -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:background="@drawable/default_shadow_inverse"
+                    android:scaleType="centerCrop" />
+
+                <Button android:id="@+id/signInButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Sign In"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/md_white_1000"
+                    android:background="@drawable/button_round_corner"
+                    android:textAllCaps="false"/>
+
+                <ImageView
+                    android:id="@+id/imageView_user_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/user_icon_male"
+                    android:focusableInTouchMode="true" />
+
+                <TextView
+                    android:id="@+id/textView_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView_user_icon"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Guest User"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp" />
+
+                <LinearLayout android:id="@+id/signOutLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1.5dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/md_white_1000" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_power_settings_new_white_36dp"
+                        android:tint="@color/md_white_1000" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.tadqa.android.util.NonScrollListView
+                android:id="@+id/listView_user_drawer_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/drawerHeader"
+                android:divider="#EBEBEB" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/md_grey_400" />
+
+            <com.tadqa.android.util.NonScrollListView
+                android:id="@+id/listView_app_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/listView_user_drawer_items"
+                android:divider="#EBEBEB" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/md_grey_400" />
+
+            <com.tadqa.android.util.NonScrollListView
+                android:id="@+id/listView_settings_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/listView_app_items"
+                android:divider="#EBEBEB" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

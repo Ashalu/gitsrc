@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.MealsFragment">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context="test.firstapp.FoodItemActivity"
+        android:typeface="serif">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/checkoutFooter"
+            android:layout_below="@id/app_bar"
+            android:typeface="serif"
+            android:background="#EEEEEE">
+
+            <ListView
+                android:id="@+id/foodItemsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/default_shadow" />
+
+        </RelativeLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/snackbarCoordinatorLayout"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true">
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/checkoutFooter"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="36dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="@null"-->
+            <!--android:orientation="vertical"-->
+            <!--android:typeface="serif"-->
+            <!--android:visibility="invisible">-->
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="#90000000" />-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:background="@color/footer_background"-->
+                <!--android:weightSum="2">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/totalAmount"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="Total : "-->
+                    <!--android:textColor="#000000"-->
+                    <!--android:textSize="17dp" />-->
+
+                <!--<View-->
+                    <!--android:layout_width="1dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:background="#60ffffff" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/checkoutActivity"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="CHECKOUT"-->
+                    <!--android:textColor="#000000"-->
+                    <!--android:textSize="17dp" />-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+    </RelativeLayout>
+
+</LinearLayout>
